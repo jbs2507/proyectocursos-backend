@@ -12,8 +12,7 @@ const corsOptions = {
   credentials: true
 };
 
-app.use(cors(corsOptions));        // ✅ CORS para todas las rutas
-app.options('/*', cors(corsOptions));
+app.use(cors(corsOptions)); // ✅ suficiente
 app.use(express.json());
 
 // Rutas
