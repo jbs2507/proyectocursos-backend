@@ -13,7 +13,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));        // ✅ CORS para todas las rutas
-app.options('*', cors(corsOptions)); // ✅ Preflight explícito
+app.options('/*', cors(corsOptions));
 app.use(express.json());
 
 // Rutas
