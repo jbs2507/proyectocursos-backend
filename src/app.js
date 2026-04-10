@@ -6,7 +6,12 @@ import cursoRoutes from './routes/curso.routes.js';
 const app = express();
 
 // Middlewares
-app.use(cors({ origin: '*' })); // 🔑 Permite cualquier origen (para desarrollo, cambiar en prod)
+app.use(cors({
+  origin: 'https://proyectocursos-frontend.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Rutas
