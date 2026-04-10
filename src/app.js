@@ -12,8 +12,12 @@ const corsOptions = {
   credentials: true
 };
 
-// Middlewares
-app.use(cors(corsOptions)); // 🔥 SOLO ESTO
+// ✅ CORS primero, antes de cualquier otra cosa
+app.use(cors(corsOptions));
+
+// ✅ Responder explícitamente a todos los preflight OPTIONS
+app.options('*', cors(corsOptions));
+
 app.use(express.json());
 
 // Rutas
