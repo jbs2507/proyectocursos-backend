@@ -13,9 +13,7 @@ const corsOptions = {
 };
 
 // Middlewares
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // 🔥 ESTA ES LA CLAVE
-
+app.use(cors(corsOptions)); // 🔥 SOLO ESTO
 app.use(express.json());
 
 // Rutas
