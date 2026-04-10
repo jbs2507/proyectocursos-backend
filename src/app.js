@@ -6,7 +6,7 @@ import cursoRoutes from './routes/curso.routes.js';
 const app = express();
 
 const corsOptions = {
-  origin: ['https://proyectocursos-frontend.vercel.app'],
+  origin: ['https://proyectocursos-frontend.vercel.app', 'http://localhost:5173/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
